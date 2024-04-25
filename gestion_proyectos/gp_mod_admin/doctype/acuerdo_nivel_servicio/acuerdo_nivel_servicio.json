@@ -1,0 +1,156 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-04-22 21:03:38.783047",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "prioridad_predet",
+  "column_break_coly",
+  "nivel_servicio",
+  "habilitado",
+  "condiciones_de_asignaci\u00f3n_section",
+  "pred_sla",
+  "column_break_yutv",
+  "condici\u00f3n",
+  "section_break_wniu",
+  "v\u00e1lido_desde_column",
+  "fecha_inicio",
+  "column_break_gbqs",
+  "fecha_fin",
+  "resoluci\u00f3n_y_respuesta_section",
+  "aplicar_sla_resoluci\u00f3n",
+  "prioridades",
+  "detalles_de_estado_section",
+  "sla_cumplido_en"
+ ],
+ "fields": [
+  {
+   "fieldname": "prioridad_predet",
+   "fieldtype": "Link",
+   "label": "Prioridad predeterminada",
+   "options": "IncidenciaPrioridad",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_coly",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "nivel_servicio",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Nombre del nivel de servicio",
+   "reqd": 1,
+   "set_only_once": 1,
+   "unique": 1
+  },
+  {
+   "default": "1",
+   "fieldname": "habilitado",
+   "fieldtype": "Check",
+   "label": "Hbilitado"
+  },
+  {
+   "fieldname": "condiciones_de_asignaci\u00f3n_section",
+   "fieldtype": "Section Break",
+   "label": "Condiciones de Asignaci\u00f3n"
+  },
+  {
+   "default": "0",
+   "fieldname": "pred_sla",
+   "fieldtype": "Check",
+   "label": "SLA predeterminado"
+  },
+  {
+   "fieldname": "column_break_yutv",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval: !doc.pred_sla",
+   "description": "Expresi\u00f3n simple de Python, ejemplo: doc.status == 'Abierto' y doc.ticket_type == 'Bug'",
+   "fieldname": "condici\u00f3n",
+   "fieldtype": "Code",
+   "label": "Condici\u00f3n",
+   "options": "PythonExpresi\u00f3n"
+  },
+  {
+   "fieldname": "section_break_wniu",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "v\u00e1lido_desde_column",
+   "fieldtype": "Column Break",
+   "label": "V\u00e1lido desde"
+  },
+  {
+   "fieldname": "fecha_inicio",
+   "fieldtype": "Date",
+   "label": "Fecha de inicio"
+  },
+  {
+   "fieldname": "column_break_gbqs",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "fecha_fin",
+   "fieldtype": "Date",
+   "label": "Feha Fin"
+  },
+  {
+   "fieldname": "resoluci\u00f3n_y_respuesta_section",
+   "fieldtype": "Section Break",
+   "label": "Resoluci\u00f3n y Respuesta "
+  },
+  {
+   "default": "1",
+   "fieldname": "aplicar_sla_resoluci\u00f3n",
+   "fieldtype": "Check",
+   "label": "Aplicar SLA para el tiempo de resoluci\u00f3n"
+  },
+  {
+   "fieldname": "prioridades",
+   "fieldtype": "Table",
+   "label": "Prioridades",
+   "options": "Prioridad_nivel_servicio",
+   "reqd": 1
+  },
+  {
+   "fieldname": "detalles_de_estado_section",
+   "fieldtype": "Section Break",
+   "label": "Detalles de estado"
+  },
+  {
+   "fieldname": "sla_cumplido_en",
+   "fieldtype": "Table",
+   "label": "SLA cumplido",
+   "options": "acuerdo_nivel_servicio_cump_est",
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-04-22 21:43:36.863045",
+ "modified_by": "Administrator",
+ "module": "gp_mod_admin",
+ "name": "Acuerdo_nivel_servicio",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

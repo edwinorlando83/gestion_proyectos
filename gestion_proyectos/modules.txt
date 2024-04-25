@@ -1,1 +1,3 @@
 Gestion Proyectos
+gp_mod_admin
+gp_mod_pers

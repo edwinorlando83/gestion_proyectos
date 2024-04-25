@@ -1,0 +1,38 @@
+{
+ "charts": [],
+ "content": "[{\"id\":\"DCdqQcd2cg\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Incidencias</span>\",\"col\":12}},{\"id\":\"gSFVCOm_Qw\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Incidencia\",\"col\":3}}]",
+ "creation": "2024-04-23 16:26:43.689825",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "icon": "file",
+ "idx": 0,
+ "indicator_color": "green",
+ "is_hidden": 0,
+ "label": "Incidencias",
+ "links": [],
+ "modified": "2024-04-24 10:39:43.310013",
+ "modified_by": "Administrator",
+ "module": "gp_mod_pers",
+ "name": "Incidencias",
+ "number_cards": [],
+ "owner": "Administrator",
+ "parent_page": "",
+ "public": 1,
+ "quick_lists": [],
+ "roles": [],
+ "sequence_id": 29.0,
+ "shortcuts": [
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Incidencia",
+   "link_to": "Incidencia",
+   "stats_filter": "[]",
+   "type": "DocType"
+  }
+ ],
+ "title": "Incidencias"
+}

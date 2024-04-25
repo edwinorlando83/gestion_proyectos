@@ -1,0 +1,191 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2024-04-23 11:25:57.949824",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "fecha",
+  "inc_tik",
+  "inc_priori",
+  "column_break_nrky",
+  "inc_est",
+  "inc_obs",
+  "section_break_ebpb",
+  "inc_asunt",
+  "inc_detall",
+  "section_break_rkoj",
+  "inc_repo",
+  "inc_req_aprob",
+  "inc_fech_apro",
+  "inc_asig",
+  "section_break_xcup",
+  "inc_aprob_por",
+  "inc_seaprueb",
+  "fecha_de_aprobacion",
+  "inc_mot"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "C\u00f3digo",
+   "options": "INCI-"
+  },
+  {
+   "default": "Today",
+   "fieldname": "fecha",
+   "fieldtype": "Date",
+   "label": "Fecha"
+  },
+  {
+   "fieldname": "inc_tik",
+   "fieldtype": "Link",
+   "label": "Tipo Tiket",
+   "options": "TipoTiket"
+  },
+  {
+   "fieldname": "inc_priori",
+   "fieldtype": "Link",
+   "label": "Prioridad",
+   "options": "Prioridad"
+  },
+  {
+   "fieldname": "inc_est",
+   "fieldtype": "Select",
+   "label": "Estado",
+   "options": "POR HACER\nLISTO\nEN PROCESO\nCANCELADO\nRECHAZADO"
+  },
+  {
+   "fieldname": "section_break_ebpb",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "inc_asunt",
+   "fieldtype": "Data",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "label": "Asunto"
+  },
+  {
+   "fieldname": "inc_detall",
+   "fieldtype": "Text Editor",
+   "label": "Detalle"
+  },
+  {
+   "fieldname": "inc_obs",
+   "fieldtype": "Small Text",
+   "label": "observaci\u00f3n "
+  },
+  {
+   "fieldname": "section_break_rkoj",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "inc_repo",
+   "fieldtype": "Link",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "label": "Reportado por",
+   "options": "Personal"
+  },
+  {
+   "default": "NO",
+   "fieldname": "inc_req_aprob",
+   "fieldtype": "Select",
+   "label": "Requiere Aprobaci\u00f3n",
+   "options": "SI\nNO"
+  },
+  {
+   "fieldname": "inc_mot",
+   "fieldtype": "Small Text",
+   "label": "Motivo - No Aprobaci\u00f3n"
+  },
+  {
+   "fieldname": "inc_fech_apro",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "inc_asig",
+   "fieldtype": "Link",
+   "label": "Asignado a",
+   "options": "Personal"
+  },
+  {
+   "fieldname": "fecha_de_aprobacion",
+   "fieldtype": "Datetime",
+   "label": "Fecha de Aprobaci\u00f3n"
+  },
+  {
+   "fieldname": "column_break_nrky",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval:doc.inc_req_aprob=='SI'",
+   "fieldname": "section_break_xcup",
+   "fieldtype": "Section Break",
+   "label": "Datos de Aprobaci\u00f3n"
+  },
+  {
+   "fieldname": "inc_aprob_por",
+   "fieldtype": "Link",
+   "label": "Aprobado por",
+   "options": "Personal"
+  },
+  {
+   "fieldname": "inc_seaprueb",
+   "fieldtype": "Select",
+   "label": "Se Aprueba",
+   "options": "SI\nNO"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-04-23 17:17:38.833697",
+ "modified_by": "Administrator",
+ "module": "gp_mod_admin",
+ "name": "Incidencia",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "GP_ROL_AGENTE",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "GP_ROL_USUARIO",
+   "share": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
