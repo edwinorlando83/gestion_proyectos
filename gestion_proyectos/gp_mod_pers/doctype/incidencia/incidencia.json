@@ -25,12 +25,13 @@
   "inc_aprob_por",
   "inc_seaprueb",
   "fecha_de_aprobacion",
-  "inc_mot"
+  "inc_mot",
+  "amended_from"
  ],
  "fields": [
   {
    "fieldname": "naming_series",
-   "fieldtype": "Data",
+   "fieldtype": "Code",
    "hidden": 1,
    "label": "C\u00f3digo",
    "options": "INCI-"
@@ -140,11 +141,22 @@
    "fieldname": "inc_mot",
    "fieldtype": "Small Text",
    "label": "Motivo - No Aprobaci\u00f3n"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Incidencia",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
   }
  ],
  "index_web_pages_for_search": 1,
+ "is_submittable": 1,
  "links": [],
- "modified": "2024-04-24 10:27:20.692266",
+ "modified": "2024-04-29 11:37:13.374402",
  "modified_by": "Administrator",
  "module": "gp_mod_pers",
  "name": "Incidencia",
@@ -164,6 +176,8 @@
    "write": 1
   },
   {
+   "amend": 1,
+   "cancel": 1,
    "create": 1,
    "delete": 1,
    "email": 1,
@@ -173,16 +187,20 @@
    "report": 1,
    "role": "GP_ROL_AGENTE",
    "share": 1,
+   "submit": 1,
    "write": 1
   },
   {
+   "create": 1,
+   "delete": 1,
    "email": 1,
    "export": 1,
    "print": 1,
    "read": 1,
    "report": 1,
    "role": "GP_ROL_USUARIO",
-   "share": 1
+   "share": 1,
+   "write": 1
   }
  ],
  "sort_field": "modified",

@@ -33,11 +33,9 @@
   },
   {
    "fieldname": "naming_series",
-   "fieldtype": "Data",
-   "hidden": 1,
+   "fieldtype": "Code",
    "label": "Codigo",
-   "options": "PRD-",
-   "unique": 1
+   "options": "PRD-"
   },
   {
    "fieldname": "nombre",
@@ -50,7 +48,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-04-23 09:09:16.210920",
+ "modified": "2024-04-29 11:40:35.301784",
  "modified_by": "Administrator",
  "module": "gp_mod_admin",
  "name": "IncidenciaPrioridad",

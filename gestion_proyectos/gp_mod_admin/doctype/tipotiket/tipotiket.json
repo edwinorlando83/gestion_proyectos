@@ -12,7 +12,7 @@
  "fields": [
   {
    "fieldname": "naming_series",
-   "fieldtype": "Data",
+   "fieldtype": "Code",
    "hidden": 1,
    "label": "C\u00f3digo",
    "options": "TIK-"
@@ -27,7 +27,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-04-23 12:12:52.682938",
+ "modified": "2024-04-29 11:38:40.706906",
  "modified_by": "Administrator",
  "module": "gp_mod_admin",
  "name": "TipoTiket",

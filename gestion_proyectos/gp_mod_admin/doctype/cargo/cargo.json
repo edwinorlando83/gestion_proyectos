@@ -12,7 +12,7 @@
  "fields": [
   {
    "fieldname": "naming_series",
-   "fieldtype": "Data",
+   "fieldtype": "Code",
    "hidden": 1,
    "label": " C\u00f3digo",
    "options": "CARG-"
@@ -25,10 +25,11 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-04-23 12:36:30.034037",
+ "modified": "2024-04-29 11:37:54.182122",
  "modified_by": "Administrator",
  "module": "gp_mod_admin",
  "name": "Cargo",
+ "naming_rule": "By \"Naming Series\" field",
  "owner": "Administrator",
  "permissions": [
   {
