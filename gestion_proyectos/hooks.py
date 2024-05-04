@@ -4,6 +4,14 @@ app_publisher = "Orlando"
 app_description = "Gestion"
 app_email = "edwin_orlando83@hotmail.com"
 app_license = "mit"
+
+permission_query_conditions = {
+     
+	"cliente": "gestion_proyectos.permission_query.incidencia",
+    
+    
+}
+
 # required_apps = []
 
 # Includes in <head>

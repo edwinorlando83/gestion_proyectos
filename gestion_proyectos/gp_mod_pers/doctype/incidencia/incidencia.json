@@ -8,24 +8,24 @@
  "field_order": [
   "naming_series",
   "fecha",
-  "inc_tik",
-  "inc_priori",
+  "inc_tipo_tiket",
+  "inc_prioridad",
   "column_break_nrky",
-  "inc_est",
-  "inc_obs",
+  "inc_estado",
+  "inc_observacion",
   "section_break_ebpb",
   "inc_asunt",
   "inc_detall",
   "section_break_rkoj",
-  "inc_repo",
-  "inc_req_aprob",
+  "inc_reportado",
+  "inc_requiere_aprob",
   "inc_fech_apro",
-  "inc_asig",
+  "inc_asignado",
   "section_break_xcup",
-  "inc_aprob_por",
-  "inc_seaprueb",
+  "inc_aprobado_por",
+  "inc_se_aprueba",
   "fecha_de_aprobacion",
-  "inc_mot",
+  "inc_motivo",
   "amended_from"
  ],
  "fields": [
@@ -43,31 +43,8 @@
    "label": "Fecha"
   },
   {
-   "fieldname": "inc_tik",
-   "fieldtype": "Link",
-   "label": "Tipo Tiket",
-   "options": "TipoTiket"
-  },
-  {
-   "fieldname": "inc_priori",
-   "fieldtype": "Link",
-   "label": "Prioridad",
-   "options": "Prioridad"
-  },
-  {
    "fieldname": "column_break_nrky",
    "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "inc_est",
-   "fieldtype": "Select",
-   "label": "Estado",
-   "options": "POR HACER\nLISTO\nEN PROCESO\nCANCELADO\nRECHAZADO"
-  },
-  {
-   "fieldname": "inc_obs",
-   "fieldtype": "Small Text",
-   "label": "observaci\u00f3n "
   },
   {
    "fieldname": "section_break_ebpb",
@@ -90,29 +67,8 @@
    "fieldtype": "Section Break"
   },
   {
-   "fieldname": "inc_repo",
-   "fieldtype": "Link",
-   "in_filter": 1,
-   "in_list_view": 1,
-   "label": "Reportado por",
-   "options": "Personal"
-  },
-  {
-   "default": "NO",
-   "fieldname": "inc_req_aprob",
-   "fieldtype": "Select",
-   "label": "Requiere Aprobaci\u00f3n",
-   "options": "SI\nNO"
-  },
-  {
    "fieldname": "inc_fech_apro",
    "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "inc_asig",
-   "fieldtype": "Link",
-   "label": "Asignado a",
-   "options": "Personal"
   },
   {
    "depends_on": "eval:doc.inc_req_aprob=='SI'",
@@ -121,24 +77,69 @@
    "label": "Datos de Aprobaci\u00f3n"
   },
   {
-   "fieldname": "inc_aprob_por",
-   "fieldtype": "Link",
-   "label": "Aprobado por",
-   "options": "Personal"
-  },
-  {
-   "fieldname": "inc_seaprueb",
-   "fieldtype": "Select",
-   "label": "Se Aprueba",
-   "options": "SI\nNO"
-  },
-  {
    "fieldname": "fecha_de_aprobacion",
    "fieldtype": "Datetime",
    "label": "Fecha de Aprobaci\u00f3n"
   },
   {
-   "fieldname": "inc_mot",
+   "fieldname": "inc_tipo_tiket",
+   "fieldtype": "Link",
+   "label": "Tipo Tiket",
+   "options": "TipoTiket"
+  },
+  {
+   "fieldname": "inc_prioridad",
+   "fieldtype": "Link",
+   "label": "Prioridad",
+   "options": "Prioridad"
+  },
+  {
+   "fieldname": "inc_estado",
+   "fieldtype": "Select",
+   "label": "Estado",
+   "options": "POR HACER\nLISTO\nEN PROCESO\nCANCELADO\nRECHAZADO"
+  },
+  {
+   "fieldname": "inc_observacion",
+   "fieldtype": "Small Text",
+   "label": "observaci\u00f3n "
+  },
+  {
+   "fieldname": "inc_reportado",
+   "fieldtype": "Link",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "label": "Reportado por",
+   "options": "Personal",
+   "read_only": 1
+  },
+  {
+   "fieldname": "inc_asignado",
+   "fieldtype": "Link",
+   "label": "Asignado a",
+   "options": "Personal"
+  },
+  {
+   "default": "NO",
+   "fieldname": "inc_requiere_aprob",
+   "fieldtype": "Select",
+   "label": "Requiere Aprobaci\u00f3n",
+   "options": "SI\nNO"
+  },
+  {
+   "fieldname": "inc_aprobado_por",
+   "fieldtype": "Link",
+   "label": "Aprobado por",
+   "options": "Personal"
+  },
+  {
+   "fieldname": "inc_se_aprueba",
+   "fieldtype": "Select",
+   "label": "Se Aprueba",
+   "options": "SI\nNO"
+  },
+  {
+   "fieldname": "inc_motivo",
    "fieldtype": "Small Text",
    "label": "Motivo - No Aprobaci\u00f3n"
   },
@@ -156,7 +157,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2024-04-29 11:37:13.374402",
+ "modified": "2024-04-30 10:35:27.191169",
  "modified_by": "Administrator",
  "module": "gp_mod_pers",
  "name": "Incidencia",

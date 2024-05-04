@@ -61,7 +61,7 @@
    "fieldname": "per_tipo",
    "fieldtype": "Select",
    "label": "Tipo",
-   "options": "AGENTE\nUSUARIO"
+   "options": "AGENTE\nUSUARIO\nAPROBADOR"
   },
   {
    "fieldname": "per_ubic",
@@ -116,7 +116,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-04-29 11:35:48.261251",
+ "modified": "2024-04-30 10:58:32.420404",
  "modified_by": "Administrator",
  "module": "gp_mod_admin",
  "name": "Personal",
