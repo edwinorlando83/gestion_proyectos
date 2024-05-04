@@ -11,7 +11,7 @@
  "idx": 0,
  "indicator_color": "",
  "is_hidden": 0,
- "label": "Configuraci\u00f3n",
+ "label": "_configuracion",
  "links": [
   {
    "hidden": 0,
@@ -82,10 +82,10 @@
    "type": "Link"
   }
  ],
- "modified": "2024-04-24 10:40:36.887752",
+ "modified": "2024-05-03 20:01:39.961810",
  "modified_by": "Administrator",
  "module": "gp_mod_admin",
- "name": "Configuraci\u00f3n",
+ "name": "_configuracion",
  "number_cards": [],
  "owner": "Administrator",
  "parent_page": "",
@@ -94,5 +94,5 @@
  "roles": [],
  "sequence_id": 28.0,
  "shortcuts": [],
- "title": "Configuraci\u00f3n"
+ "title": "_configuracion"
 }
