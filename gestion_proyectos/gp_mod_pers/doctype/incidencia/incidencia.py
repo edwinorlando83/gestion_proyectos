@@ -24,12 +24,15 @@ def enviarNotificacion(self):
 						""".format(reportado.nom_compl,   " " ,  " ")
 	notilog.for_user =  correo
 	notilog.type = "Assignment"
-	notilog.email_content = """<p>Hola<p>
-	Un nuevo ticket ha sido asignado:
-	Si ya tiene agente no lo tramite. 
-	ID: 9232
-	ASUNTO: Direccionar correo electrónico
-	DESCRIPCIÓN</div>""".format(self.inc_detall)
+	notilog.email_content = """<h4><em><span style="color: #993300;"><strong>Notificaci&oacute;n</strong>&nbsp;</span></em></h4>
+<p><br />Un nuevo requerimiento ha sido emitido por:</p>
+<p><strong>{3}</strong></p>
+<p><strong>Asunto:{2}</strong> fghfh</p>
+<p><strong>Detalle:{0}</strong> hfhfhg</p>
+<p><strong>ID:{1}</strong>1424</p>
+<p>&nbsp;</p>
+<p><img src="https://app.cooperativasisa.com/assets/asecop/imagenes/logoa.png" alt="" width="130" height="76" /></p>
+<p>No debe responder este correo</p>""".format(self.inc_detall,self.name,self.inc_asunt ,reportado.nom_compl)
 	notilog.document_type = "Incidencia"
 	notilog.read = 0
 	notilog.document_name = self.name
