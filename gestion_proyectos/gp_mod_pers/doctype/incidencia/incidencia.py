@@ -18,22 +18,22 @@ class Incidencia(Document):
 def enviarNotificacion(self):
 	correo= frappe.db.get_single_value("gp_configuracion", "correo")
 	reportado = frappe.get_doc("Personal", self.inc_reportado)
-	if correo:
-		notilog = frappe.new_doc("Notification Log")
-		notilog.subject =  """Nuevo ticket  de {0}  
-							""".format(reportado.nom_compl,   " " ,  " ")
-		notilog.for_user =   ""
-		notilog.type = "Assignment"
-		notilog.email_content = """<p>Hola<p>
-		Un nuevo ticket ha sido asignado:
-		Si ya tiene agente no lo tramite. 
-		ID: 9232
-		ASUNTO: Direccionar correo electrónico
-		DESCRIPCIÓN</div>""".format(self.inc_detall)
-		notilog.document_type = "Incidencia"
-		notilog.read = 0
-		notilog.document_name = self.name
-		notilog.insert(ignore_permissions = True) 	 
+	 
+	notilog = frappe.new_doc("Notification Log")
+	notilog.subject =  """Nuevo ticket  de {0}  
+						""".format(reportado.nom_compl,   " " ,  " ")
+	notilog.for_user =   ""
+	notilog.type = "Assignment"
+	notilog.email_content = """<p>Hola<p>
+	Un nuevo ticket ha sido asignado:
+	Si ya tiene agente no lo tramite. 
+	ID: 9232
+	ASUNTO: Direccionar correo electrónico
+	DESCRIPCIÓN</div>""".format(self.inc_detall)
+	notilog.document_type = "Incidencia"
+	notilog.read = 0
+	notilog.document_name = self.name
+	notilog.insert(ignore_permissions = True) 	 
 
 def enviarCorreo(self):
 		if frappe.db.exists("Email Template", "campo"):
