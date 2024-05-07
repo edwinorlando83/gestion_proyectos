@@ -40,7 +40,8 @@
    "default": "Today",
    "fieldname": "fecha",
    "fieldtype": "Date",
-   "label": "Fecha"
+   "label": "Fecha",
+   "reqd": 1
   },
   {
    "fieldname": "column_break_nrky",
@@ -55,12 +56,14 @@
    "fieldtype": "Data",
    "in_filter": 1,
    "in_list_view": 1,
-   "label": "Asunto"
+   "label": "Asunto",
+   "reqd": 1
   },
   {
    "fieldname": "inc_detall",
    "fieldtype": "Text Editor",
-   "label": "Detalle"
+   "label": "Detalle",
+   "reqd": 1
   },
   {
    "fieldname": "section_break_rkoj",
@@ -71,7 +74,7 @@
    "fieldtype": "Column Break"
   },
   {
-   "depends_on": "eval:doc.inc_req_aprob=='SI'",
+   "depends_on": "eval:doc.inc_requiere_aprob=='SI'",
    "fieldname": "section_break_xcup",
    "fieldtype": "Section Break",
    "label": "Datos de Aprobaci\u00f3n"
@@ -79,7 +82,8 @@
   {
    "fieldname": "fecha_de_aprobacion",
    "fieldtype": "Datetime",
-   "label": "Fecha de Aprobaci\u00f3n"
+   "label": "Fecha de Aprobaci\u00f3n",
+   "read_only": 1
   },
   {
    "fieldname": "inc_tipo_tiket",
@@ -96,6 +100,8 @@
   {
    "fieldname": "inc_estado",
    "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Estado",
    "options": "POR HACER\nLISTO\nEN PROCESO\nCANCELADO\nRECHAZADO"
   },
@@ -109,6 +115,7 @@
    "fieldtype": "Link",
    "in_filter": 1,
    "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Reportado por",
    "options": "Personal",
    "read_only": 1
@@ -129,7 +136,7 @@
   {
    "fieldname": "inc_aprobado_por",
    "fieldtype": "Link",
-   "label": "Aprobado por",
+   "label": "Nombre de la Persona que Aprueba",
    "options": "Personal"
   },
   {
@@ -139,6 +146,7 @@
    "options": "SI\nNO"
   },
   {
+   "depends_on": "eval:doc.inc_se_aprueba=='NO'",
    "fieldname": "inc_motivo",
    "fieldtype": "Small Text",
    "label": "Motivo - No Aprobaci\u00f3n"
@@ -155,9 +163,8 @@
   }
  ],
  "index_web_pages_for_search": 1,
- "is_submittable": 1,
  "links": [],
- "modified": "2024-04-30 10:35:27.191169",
+ "modified": "2024-05-06 21:09:59.087707",
  "modified_by": "Administrator",
  "module": "gp_mod_pers",
  "name": "Incidencia",
@@ -177,8 +184,6 @@
    "write": 1
   },
   {
-   "amend": 1,
-   "cancel": 1,
    "create": 1,
    "delete": 1,
    "email": 1,
@@ -188,7 +193,6 @@
    "report": 1,
    "role": "GP_ROL_AGENTE",
    "share": 1,
-   "submit": 1,
    "write": 1
   },
   {
@@ -202,9 +206,24 @@
    "role": "GP_ROL_USUARIO",
    "share": 1,
    "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "GP_ROL_APROBADOR",
+   "share": 1,
+   "write": 1
   }
  ],
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": []
+ "states": [],
+ "track_changes": 1,
+ "track_seen": 1,
+ "track_views": 1
 }

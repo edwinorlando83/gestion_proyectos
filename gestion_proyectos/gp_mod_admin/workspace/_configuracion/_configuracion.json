@@ -1,6 +1,6 @@
 {
  "charts": [],
- "content": "[{\"id\":\"WM6IFisEcS\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Configuraci\u00f3n</span>\",\"col\":12}},{\"id\":\"HoXFhrVAkt\",\"type\":\"card\",\"data\":{\"card_name\":\"Personal\",\"col\":4}},{\"id\":\"naIZcp1Z05\",\"type\":\"card\",\"data\":{\"card_name\":\"Tiket\",\"col\":4}}]",
+ "content": "[{\"id\":\"WM6IFisEcS\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Configuraci\u00f3n</span>\",\"col\":12}},{\"id\":\"HoXFhrVAkt\",\"type\":\"card\",\"data\":{\"card_name\":\"Personal\",\"col\":4}},{\"id\":\"naIZcp1Z05\",\"type\":\"card\",\"data\":{\"card_name\":\"Tiket\",\"col\":4}},{\"id\":\"VQl6bJWJih\",\"type\":\"card\",\"data\":{\"card_name\":\"Configuraciones\",\"col\":4}}]",
  "creation": "2024-04-23 15:53:06.425225",
  "custom_blocks": [],
  "docstatus": 0,
@@ -80,9 +80,28 @@
    "link_type": "DocType",
    "onboard": 0,
    "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Configuraciones",
+   "link_count": 1,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": " gp_configuracion",
+   "link_count": 0,
+   "link_to": "gp_configuracion",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
   }
  ],
- "modified": "2024-05-03 20:01:39.961810",
+ "modified": "2024-05-06 21:36:38.508953",
  "modified_by": "Administrator",
  "module": "gp_mod_admin",
  "name": "_configuracion",

@@ -1,0 +1,46 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-05-06 21:14:18.721545",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "configuraciones_section",
+  "correo"
+ ],
+ "fields": [
+  {
+   "fieldname": "configuraciones_section",
+   "fieldtype": "Section Break",
+   "label": "Configuraciones"
+  },
+  {
+   "fieldname": "correo",
+   "fieldtype": "Data",
+   "label": "Correo donde llegan todas las incidencias"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "issingle": 1,
+ "links": [],
+ "modified": "2024-05-06 21:15:51.356925",
+ "modified_by": "Administrator",
+ "module": "gp_mod_admin",
+ "name": "gp_configuracion",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
