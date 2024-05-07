@@ -26,7 +26,7 @@ def enviarNotificacion(self):
 	notilog.type = "Assignment"
 	notilog.email_content = """<h4><em><span style="color: #993300;"><strong>Notificaci&oacute;n</strong>&nbsp;</span></em></h4>
 <p><br />Un nuevo requerimiento ha sido emitido por:</p>
-<p><strong></strong>{3}</p>
+<p><strong>{3}</strong></p>
 <p><strong>Asunto:</strong>{2}</p>
 <p><strong>Detalle:</strong>{0}</p>
 <p><strong>ID:</strong>{1}</p>
