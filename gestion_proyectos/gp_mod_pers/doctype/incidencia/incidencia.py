@@ -22,7 +22,7 @@ def enviarNotificacion(self):
 	notilog = frappe.new_doc("Notification Log")
 	notilog.subject =  """Nuevo ticket  de {0}  
 						""".format(reportado.nom_compl,   " " ,  " ")
-	notilog.for_user =   ""
+	notilog.for_user =  correo
 	notilog.type = "Assignment"
 	notilog.email_content = """<p>Hola<p>
 	Un nuevo ticket ha sido asignado:
