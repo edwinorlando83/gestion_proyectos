@@ -7,9 +7,7 @@
  "engine": "InnoDB",
  "field_order": [
   "cedula",
-  "per_nom",
-  "per_apell",
-  "nom_compl",
+  "nombre_completo",
   "column_break_jhlj",
   "per_area",
   "per_carg",
@@ -39,25 +37,7 @@
    "unique": 1
   },
   {
-   "fieldname": "per_nom",
-   "fieldtype": "Data",
-   "label": "Nombres ",
-   "reqd": 1
-  },
-  {
-   "fieldname": "per_apell",
-   "fieldtype": "Data",
-   "label": "Apellidos",
-   "reqd": 1
-  },
-  {
-   "fieldname": "nom_compl",
-   "fieldtype": "Data",
-   "in_list_view": 1,
-   "label": "Nombre completo",
-   "read_only": 1
-  },
-  {
+   "default": "USUARIO",
    "fieldname": "per_tipo",
    "fieldtype": "Select",
    "label": "Tipo",
@@ -71,7 +51,7 @@
   {
    "fieldname": "per_area",
    "fieldtype": "Link",
-   "label": "\u00c1rea",
+   "label": "\u00c1rea / Sucursal",
    "options": "Area"
   },
   {
@@ -112,11 +92,18 @@
    "print_hide": 1,
    "read_only": 1,
    "search_index": 1
+  },
+  {
+   "fieldname": "nombre_completo",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Nombre completo",
+   "reqd": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-05-03 22:16:30.234927",
+ "modified": "2024-05-15 21:07:24.067982",
  "modified_by": "Administrator",
  "module": "gp_mod_admin",
  "name": "Personal",
@@ -170,5 +157,5 @@
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": [],
- "title_field": "nom_compl"
+ "title_field": "nombre_completo"
 }

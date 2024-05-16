@@ -3,12 +3,9 @@
 
 import frappe
 from frappe.model.document import Document
+ 
 
-
-class Personal(Document):
-	def validate(self):
-		unirnombre(self)
-		
+class Personal(Document):		
 		
 	def on_update(self):
 		crear_usuario(self) 
@@ -23,8 +20,7 @@ def crear_usuario(self):
 				usuario.username = self.cedula
 				usuario.email = self.email
 				usuario.new_password = "App.2024"
-				usuario.first_name = self.per_nom
-				usuario.last_name = self.per_apell
+				usuario.first_name = self.nombre_completo	 
 				usuario.send_welcome_email= 0	
 				if self.per_tipo == "AGENTE":
 					usuario.role_profile_name	 ='rol_agente'	
@@ -44,5 +40,5 @@ def crear_usuario(self):
 
 
 
-
-
+ 
+ 
