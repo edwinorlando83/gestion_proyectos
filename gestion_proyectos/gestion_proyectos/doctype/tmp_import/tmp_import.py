@@ -8,7 +8,7 @@ from frappe.model.document import Document
 class tmp_import(Document):
 	pass
 
-# bench --site  sisahelp  execute  gestion_proyectos.gestion_proyectos.doctype.tmp_import.tmp_import.importar
+# bench --site   soporteweb  execute  gestion_proyectos.gestion_proyectos.doctype.tmp_import.tmp_import.importar
  
 def importar():
 	sql = "SELECT  cedula , nombres , correo , cargo ,agencia  FROM tabtmp_import  where correo like '%cooperativasisa.com'"
@@ -22,9 +22,9 @@ def importar():
 
 def creaAgencia(agencia):
 	if agencia :
-		existe = frappe.db.exists('Area', {"area_desc":agencia})
+		existe = frappe.db.exists('coop_sucursal', {"area_desc":agencia})
 		if not existe :
-			obj = frappe.new_doc("Area") 
+			obj = frappe.new_doc("coop_sucursal") 
 			obj.area_desc = agencia
 			obj.insert()
 			return obj.name
@@ -60,5 +60,9 @@ def creapersonal(email,nombre_completo,cargo,area,cedula):
 			print(nombre_completo)
 			return obj.name
 		else:
-			return existe
+			obj = frappe.get_doc("Personal", existe) 
+			obj.per_area = creaAgencia (area)
+			obj.save()
+
+			
  
