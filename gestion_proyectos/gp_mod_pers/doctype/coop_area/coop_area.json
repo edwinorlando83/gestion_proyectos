@@ -2,35 +2,35 @@
  "actions": [],
  "allow_rename": 1,
  "autoname": "naming_series:",
- "creation": "2024-04-23 11:17:51.482297",
+ "creation": "2024-05-24 10:41:08.440454",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "naming_series",
-  "area_desc"
+  "nombre",
+  "naming_series"
  ],
  "fields": [
   {
    "fieldname": "naming_series",
    "fieldtype": "Code",
    "hidden": 1,
-   "label": "C\u00f3digo",
+   "label": "Codigo",
    "options": "AREA-"
   },
   {
-   "fieldname": "area_desc",
+   "fieldname": "nombre",
    "fieldtype": "Data",
-   "in_filter": 1,
    "in_list_view": 1,
-   "label": "Descripci\u00f3n"
+   "label": "Nombre del Area",
+   "reqd": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-04-29 11:38:22.991638",
+ "modified": "2024-05-24 10:55:32.743639",
  "modified_by": "Administrator",
- "module": "gp_mod_admin",
- "name": "Area",
+ "module": "gp_mod_pers",
+ "name": "coop_area",
  "naming_rule": "By \"Naming Series\" field",
  "owner": "Administrator",
  "permissions": [
@@ -64,6 +64,15 @@
    "print": 1,
    "read": 1,
    "report": 1,
+   "role": "GP_ROL_APROBADOR",
+   "share": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
    "role": "GP_ROL_USUARIO",
    "share": 1
   }
@@ -72,5 +81,6 @@
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": [],
- "title_field": "area_desc"
+ "title_field": "nombre",
+ "translated_doctype": 1
 }

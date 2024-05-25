@@ -6,7 +6,8 @@
  "engine": "InnoDB",
  "field_order": [
   "configuraciones_section",
-  "correo"
+  "correo",
+  "personal"
  ],
  "fields": [
   {
@@ -18,12 +19,18 @@
    "fieldname": "correo",
    "fieldtype": "Data",
    "label": "Correo donde llegan todas las incidencias"
+  },
+  {
+   "fieldname": "personal",
+   "fieldtype": "Link",
+   "label": "Asigando A (por defecto)",
+   "options": "Personal"
   }
  ],
  "index_web_pages_for_search": 1,
  "issingle": 1,
  "links": [],
- "modified": "2024-05-06 21:15:51.356925",
+ "modified": "2024-05-24 10:37:11.845004",
  "modified_by": "Administrator",
  "module": "gp_mod_admin",
  "name": "gp_configuracion",
@@ -36,6 +43,16 @@
    "print": 1,
    "read": 1,
    "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "GP_ROL_AGENTE",
    "share": 1,
    "write": 1
   }

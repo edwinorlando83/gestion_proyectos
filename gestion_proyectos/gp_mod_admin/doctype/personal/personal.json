@@ -8,11 +8,12 @@
  "field_order": [
   "cedula",
   "nombre_completo",
-  "column_break_jhlj",
   "per_area",
   "per_carg",
+  "column_break_jhlj",
   "email",
   "per_ubic",
+  "coop_area",
   "informacion_de_acceso_section",
   "per_tipo",
   "per_usua",
@@ -51,8 +52,8 @@
   {
    "fieldname": "per_area",
    "fieldtype": "Link",
-   "label": "\u00c1rea / Sucursal",
-   "options": "Area"
+   "label": "Sucursal",
+   "options": "coop_sucursal"
   },
   {
    "fieldname": "per_carg",
@@ -67,6 +68,7 @@
   {
    "fieldname": "email",
    "fieldtype": "Data",
+   "in_standard_filter": 1,
    "label": "Email",
    "reqd": 1,
    "set_only_once": 1,
@@ -99,11 +101,17 @@
    "in_list_view": 1,
    "label": "Nombre completo",
    "reqd": 1
+  },
+  {
+   "fieldname": "coop_area",
+   "fieldtype": "Link",
+   "label": "Area",
+   "options": "coop_area"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-05-15 21:07:24.067982",
+ "modified": "2024-05-24 12:42:54.505238",
  "modified_by": "Administrator",
  "module": "gp_mod_admin",
  "name": "Personal",

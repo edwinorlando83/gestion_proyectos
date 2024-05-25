@@ -18,7 +18,7 @@ permission_query_conditions = {
 # ------------------
 
 # include js, css files in header of desk.html
-# app_include_css = "/assets/gestion_proyectos/css/gestion_proyectos.css"
+app_include_css = "/assets/gestion_proyectos/css/gestion_proyectos.css"
 # app_include_js = "/assets/gestion_proyectos/js/gestion_proyectos.js"
 
 # include js, css files in header of web template

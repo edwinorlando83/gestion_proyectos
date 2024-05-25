@@ -5,5 +5,5 @@
 from frappe.tests.utils import FrappeTestCase
 
 
-class TestArea(FrappeTestCase):
+class Testcoop_area(FrappeTestCase):
 	pass
