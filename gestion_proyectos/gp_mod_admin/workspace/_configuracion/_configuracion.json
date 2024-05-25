@@ -85,7 +85,7 @@
    "is_query_report": 0,
    "label": "Sucursal",
    "link_count": 0,
-   "link_to": "Area",
+   "link_to": "coop_sucursal",
    "link_type": "DocType",
    "onboard": 0,
    "type": "Link"
