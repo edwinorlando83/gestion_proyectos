@@ -85,7 +85,7 @@
    "is_query_report": 0,
    "label": "Sucursal",
    "link_count": 0,
-   "link_to": "coop_sucursal",
+   "link_to": "coop_area",
    "link_type": "DocType",
    "onboard": 0,
    "type": "Link"
@@ -111,7 +111,7 @@
    "type": "Link"
   }
  ],
- "modified": "2024-05-24 10:50:22.154101",
+ "modified": "2024-05-24 20:42:21.433428",
  "modified_by": "Administrator",
  "module": "gp_mod_admin",
  "name": "_configuracion",
