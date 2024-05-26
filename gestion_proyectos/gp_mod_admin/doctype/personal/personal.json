@@ -53,7 +53,8 @@
    "fieldname": "per_area",
    "fieldtype": "Link",
    "label": "Sucursal",
-   "options": "coop_sucursal"
+   "options": "coop_sucursal",
+   "reqd": 1
   },
   {
    "fieldname": "per_carg",
@@ -106,12 +107,13 @@
    "fieldname": "coop_area",
    "fieldtype": "Link",
    "label": "Area",
-   "options": "coop_area"
+   "options": "coop_area",
+   "reqd": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-05-24 12:42:54.505238",
+ "modified": "2024-05-25 20:50:44.715432",
  "modified_by": "Administrator",
  "module": "gp_mod_admin",
  "name": "Personal",

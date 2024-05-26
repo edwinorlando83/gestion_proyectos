@@ -25,12 +25,12 @@ def enviarNotificacion(self):
 	correoperasig= None
 	if self.inc_asignado:
 		inc_asignado = frappe.get_doc("Personal", self.inc_asignado)
-		correoperasig = inc_asignado.correo
+		correoperasig = inc_asignado.email
 
 	 
 	notilog = frappe.new_doc("Notification Log")
 	notilog.subject =  """Nuevo ticket  de {0}  
-						""".format(reportado.nom_compl,   " " ,  " ")
+						""".format(reportado.nombre_completo,   " " ,  " ")
 	notilog.for_user = correoperasig  or correo
 	notilog.type = "Assignment"
 	notilog.email_content = """<h4><em><span style="color: #993300;"><strong>Notificaci&oacute;n</strong>&nbsp;</span></em></h4>

@@ -103,7 +103,7 @@
    "in_list_view": 1,
    "in_standard_filter": 1,
    "label": "Estado",
-   "options": "POR HACER\nLISTO\nEN PROCESO\nCANCELADO\nRECHAZADO"
+   "options": "POR HACER\nEN PROCESO\nCANCELADO\nRECHAZADO\nLISTO"
   },
   {
    "fieldname": "inc_observacion",
@@ -164,7 +164,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-05-06 21:09:59.087707",
+ "modified": "2024-05-25 20:58:25.002266",
  "modified_by": "Administrator",
  "module": "gp_mod_pers",
  "name": "Incidencia",

@@ -8,7 +8,7 @@ from frappe.model.document import Document
 class tmp_import(Document):
 	pass
 
-# bench --site   soporteweb  execute  gestion_proyectos.gestion_proyectos.doctype.tmp_import.tmp_import.importar
+# bench --site   soporte.cooperativasisa.com  execute  gestion_proyectos.gestion_proyectos.doctype.tmp_import.tmp_import.importar
  
 def importar():
 	sql = "SELECT  cedula , nombres , correo , cargo ,agencia  FROM tabtmp_import  where correo like '%cooperativasisa.com'"

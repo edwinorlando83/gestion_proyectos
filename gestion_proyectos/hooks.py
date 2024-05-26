@@ -7,8 +7,8 @@ app_license = "mit"
 
 permission_query_conditions = {
      
-	"cliente": "gestion_proyectos.permission_query.incidencia",
-    
+	 
+    "Incidencia": "gestion_proyectos.permission_query.incidencia",
     
 }
 
