@@ -1,6 +1,6 @@
 {
  "charts": [],
- "content": "[{\"id\":\"DCdqQcd2cg\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Incidencias</span>\",\"col\":12}},{\"id\":\"gSFVCOm_Qw\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Incidencia\",\"col\":3}}]",
+ "content": "[{\"id\":\"DCdqQcd2cg\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Incidencias</span>\",\"col\":12}},{\"id\":\"iZwJEBHP0w\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Incidencias\",\"col\":4}},{\"id\":\"gSFVCOm_Qw\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Incidencia\",\"col\":3}}]",
  "creation": "2024-04-23 16:26:43.689825",
  "custom_blocks": [],
  "docstatus": 0,
@@ -13,11 +13,16 @@
  "is_hidden": 0,
  "label": "Incidencias",
  "links": [],
- "modified": "2024-04-24 10:39:43.310013",
+ "modified": "2024-05-25 21:09:10.116588",
  "modified_by": "Administrator",
  "module": "gp_mod_pers",
  "name": "Incidencias",
- "number_cards": [],
+ "number_cards": [
+  {
+   "label": "Incidencias",
+   "number_card_name": "Incidencias"
+  }
+ ],
  "owner": "Administrator",
  "parent_page": "",
  "public": 1,
