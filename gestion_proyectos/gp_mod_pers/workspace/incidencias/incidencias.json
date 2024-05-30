@@ -1,6 +1,6 @@
 {
  "charts": [],
- "content": "[{\"id\":\"DCdqQcd2cg\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Incidencias</span>\",\"col\":12}},{\"id\":\"iZwJEBHP0w\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Incidencias\",\"col\":4}},{\"id\":\"gSFVCOm_Qw\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Incidencia\",\"col\":3}}]",
+ "content": "[{\"id\":\"DCdqQcd2cg\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Incidencias</span>\",\"col\":12}},{\"id\":\"dmYeZV_oO5\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"POR HACER\",\"col\":4}},{\"id\":\"P9zi-eM9A2\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"EN PROCESO\",\"col\":4}},{\"id\":\"sLYVbOmLwl\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"CANCELADO\",\"col\":4}},{\"id\":\"Ba_XdC5wu1\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"RECHAZADO\",\"col\":4}},{\"id\":\"HGXoxHU4Mg\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"LISTO\",\"col\":4}},{\"id\":\"WFUaDFVa6Q\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"gSFVCOm_Qw\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Reportar Incidencia\",\"col\":3}},{\"id\":\"8wo5FQW34b\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"gFCuqFjLz3\",\"type\":\"card\",\"data\":{\"card_name\":\"Incidencias\",\"col\":4}}]",
  "creation": "2024-04-23 16:26:43.689825",
  "custom_blocks": [],
  "docstatus": 0,
@@ -12,12 +12,53 @@
  "indicator_color": "green",
  "is_hidden": 0,
  "label": "Incidencias",
- "links": [],
- "modified": "2024-05-29 18:47:44.337158",
+ "links": [
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Incidencias",
+   "link_count": 1,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Lista de Incidencias",
+   "link_count": 0,
+   "link_to": "Incidencia",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  }
+ ],
+ "modified": "2024-05-30 06:02:53.542687",
  "modified_by": "Administrator",
  "module": "gp_mod_pers",
  "name": "Incidencias",
- "number_cards": [],
+ "number_cards": [
+  {
+   "label": "POR HACER",
+   "number_card_name": "POR HACER"
+  },
+  {
+   "label": "EN PROCESO",
+   "number_card_name": "EN PROCESO"
+  },
+  {
+   "label": "CANCELADO",
+   "number_card_name": "CANCELADO"
+  },
+  {
+   "label": "RECHAZADO",
+   "number_card_name": "RECHAZADO"
+  },
+  {
+   "label": "LISTO",
+   "number_card_name": "LISTO"
+  }
+ ],
  "owner": "Administrator",
  "parent_page": "",
  "public": 1,
@@ -26,9 +67,9 @@
  "sequence_id": 29.0,
  "shortcuts": [
   {
-   "color": "Grey",
-   "doc_view": "List",
-   "label": "Incidencia",
+   "color": "Green",
+   "doc_view": "New",
+   "label": "Reportar Incidencia",
    "link_to": "Incidencia",
    "stats_filter": "[]",
    "type": "DocType"
