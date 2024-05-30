@@ -139,6 +139,7 @@
    "fieldname": "inc_aprobado_por",
    "fieldtype": "Link",
    "label": "Nombre de la Persona que Aprueba",
+   "link_filters": "[[\"Personal\",\"per_tipo\",\"=\",\"APROBADOR\"]]",
    "options": "Personal"
   },
   {
@@ -178,7 +179,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-05-29 18:58:07.852509",
+ "modified": "2024-05-30 05:20:39.683367",
  "modified_by": "Administrator",
  "module": "gp_mod_pers",
  "name": "Incidencia",
