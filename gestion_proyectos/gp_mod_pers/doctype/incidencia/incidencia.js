@@ -21,7 +21,7 @@ function ocultarcampos(frm){
                 frm.set_df_property("inc_se_aprueba", "hidden", 1 );
                 frm.set_df_property("fecha_de_aprobacion", "hidden", 1 );
                 frm.set_df_property("inc_motivo", "hidden", 1 );
-                   
+                frm.set_df_property("inc_horas", "hidden", 1 ); 
             }
           
 
@@ -36,6 +36,7 @@ function ocultarcampos(frm){
                 frm.set_df_property("fecha_de_aprobacion", "hidden", 0 );
                 frm.set_df_property("inc_motivo", "hidden", 0 );
                 frm.set_df_property("inc_requiere_aprob", "hidden", 1 );
+                frm.set_df_property("inc_horas", "hidden", 1 ); 
                // frm.set_df_property("inc_requiere_aprob", "read_only", 0);
             }
             if( frm.is_new()){
@@ -50,7 +51,7 @@ function ocultarcampos(frm){
                 frm.set_df_property("inc_se_aprueba", "hidden", 1 );
                 frm.set_df_property("fecha_de_aprobacion", "hidden", 1 );
                 frm.set_df_property("inc_motivo", "hidden", 1 );
-
+                frm.set_df_property("inc_horas", "hidden", 1 ); 
             }
 
     }

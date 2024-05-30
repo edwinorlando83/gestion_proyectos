@@ -16,6 +16,8 @@
   "inc_asignado",
   "inc_estado",
   "inc_observacion",
+  "inc_horas",
+  "inc_finalizacion",
   "section_break_ebpb",
   "inc_asunt",
   "inc_detall",
@@ -175,11 +177,23 @@
    "fieldname": "sucursal",
    "fieldtype": "Read Only",
    "label": "Sucursal"
+  },
+  {
+   "fieldname": "inc_horas",
+   "fieldtype": "Int",
+   "label": "Horas invertidas",
+   "non_negative": 1
+  },
+  {
+   "fieldname": "inc_finalizacion",
+   "fieldtype": "Datetime",
+   "label": "Fecha de finalizaci\u00f3n",
+   "read_only": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-05-30 05:20:39.683367",
+ "modified": "2024-05-30 05:30:41.007753",
  "modified_by": "Administrator",
  "module": "gp_mod_pers",
  "name": "Incidencia",
