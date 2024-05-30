@@ -7,8 +7,9 @@
  "engine": "InnoDB",
  "field_order": [
   "inc_reportado",
-  "naming_series",
   "fecha",
+  "area",
+  "sucursal",
   "inc_tipo_tiket",
   "inc_prioridad",
   "column_break_nrky",
@@ -26,7 +27,8 @@
   "inc_se_aprueba",
   "fecha_de_aprobacion",
   "inc_motivo",
-  "amended_from"
+  "amended_from",
+  "naming_series"
  ],
  "fields": [
   {
@@ -108,7 +110,7 @@
   {
    "fieldname": "inc_observacion",
    "fieldtype": "Small Text",
-   "label": "observaci\u00f3n "
+   "label": "Observaci\u00f3n "
   },
   {
    "fieldname": "inc_reportado",
@@ -160,11 +162,23 @@
    "print_hide": 1,
    "read_only": 1,
    "search_index": 1
+  },
+  {
+   "fetch_from": "inc_reportado.area_nombre",
+   "fieldname": "area",
+   "fieldtype": "Read Only",
+   "label": "Area"
+  },
+  {
+   "fetch_from": "inc_reportado.surcursal_nombre",
+   "fieldname": "sucursal",
+   "fieldtype": "Read Only",
+   "label": "Sucursal"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-05-25 21:06:22.936797",
+ "modified": "2024-05-29 18:58:07.852509",
  "modified_by": "Administrator",
  "module": "gp_mod_pers",
  "name": "Incidencia",

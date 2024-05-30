@@ -15,6 +15,7 @@ def incidencia(user):
     if 'System Manager' in frappe.get_roles(user):
         return ""
     else:
-        return """( inc_reportado = '{0}' )""".format(user)
+        per = frappe.get_doc("Personal", {"email":user})
+        return """( inc_reportado = '{0}' )""".format(per.name)
 
  

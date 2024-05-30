@@ -13,16 +13,11 @@
  "is_hidden": 0,
  "label": "Incidencias",
  "links": [],
- "modified": "2024-05-25 21:09:10.116588",
+ "modified": "2024-05-29 18:47:44.337158",
  "modified_by": "Administrator",
  "module": "gp_mod_pers",
  "name": "Incidencias",
- "number_cards": [
-  {
-   "label": "Incidencias",
-   "number_card_name": "Incidencias"
-  }
- ],
+ "number_cards": [],
  "owner": "Administrator",
  "parent_page": "",
  "public": 1,

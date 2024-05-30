@@ -18,7 +18,9 @@
   "per_tipo",
   "per_usua",
   "naming_series",
-  "amended_from"
+  "amended_from",
+  "area_nombre",
+  "surcursal_nombre"
  ],
  "fields": [
   {
@@ -109,11 +111,25 @@
    "label": "Area",
    "options": "coop_area",
    "reqd": 1
+  },
+  {
+   "fetch_from": "coop_area.nombre",
+   "fieldname": "area_nombre",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "AreaNombre"
+  },
+  {
+   "fetch_from": "per_area.area_desc",
+   "fieldname": "surcursal_nombre",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "SucursalNombre"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-05-25 20:50:44.715432",
+ "modified": "2024-05-29 18:57:04.928166",
  "modified_by": "Administrator",
  "module": "gp_mod_admin",
  "name": "Personal",
