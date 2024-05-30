@@ -1,6 +1,6 @@
 {
  "aggregate_function_based_on": "",
- "color": "#d9f53b",
+ "color": "#ED6396",
  "creation": "2024-05-30 05:57:35.491478",
  "docstatus": 0,
  "doctype": "Number Card",
@@ -12,7 +12,7 @@
  "is_public": 1,
  "is_standard": 1,
  "label": "CANCELADO",
- "modified": "2024-05-30 05:57:35.491478",
+ "modified": "2024-05-30 06:58:03.138173",
  "modified_by": "Administrator",
  "module": "gp_mod_pers",
  "name": "CANCELADO",
