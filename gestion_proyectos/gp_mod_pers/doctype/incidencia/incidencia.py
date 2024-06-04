@@ -64,9 +64,9 @@ def enviarCorreo(self, noti):
 
 
 def disable_email_notifications():
-	existe = frappe.db.exists ("Notification Settings", user)
+	existe = frappe.db.exists ("Notification Settings", frappe.session.user)
 	if existe :
-		enabled = frappe.db.get_value("Notification Settings", user, "enable_email_notifications")
+		enabled = frappe.db.get_value("Notification Settings", frappe.session.user, "enable_email_notifications")
 		if enabled == 1  :
 			notset = frappe.get_doc("Notification Settings", reportado.email )
 			notset.enable_email_notifications = 0
