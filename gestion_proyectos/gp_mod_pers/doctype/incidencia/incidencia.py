@@ -22,7 +22,7 @@ class Incidencia(Document):
 def enviarNotificacion(self):
 	correo= frappe.db.get_single_value("gp_configuracion", "correo")
 	reportado = frappe.get_doc("Personal", self.inc_reportado)
-	
+	disable_email_notifications()
 	correoperasig= None
 	if self.inc_asignado:
 		inc_asignado = frappe.get_doc("Personal", self.inc_asignado)
@@ -49,18 +49,25 @@ def enviarNotificacion(self):
 	notilog.document_name = self.name
 	notilog.insert(ignore_permissions = True) 	 
 
-def enviarCorreo(self):
-		if frappe.db.exists("Email Template", "campo"):
-				email_template = frappe.get_doc("Email Template", "campo")
-				context = {"doc":  self,"broker":frappe.db.get_value("mi_configuracion",None,'nombre_asesor') , "documentos":lstDocumentos[:-2]}
-				asunto = frappe.render_template(email_template.subject, context)
-				mensaje = frappe.render_template(email_template.response, context)
-				config = True
+ 
 
-		frappe.sendmail( recipients= "emails",
-				cc=[],
+def enviarCorreo(self, noti):
+	asunto =  noti.subject
+	mensaje = noti.email_content
+	frappe.sendmail( recipients= [noti.for_user ],
+				cc=[noti.from_user ],
 				message= mensaje,
 				subject= asunto,			 
 				reference_doctype= self.doctype,
 				reference_name= self.name, 
 				delayed=False)
+
+
+def disable_email_notifications():
+	existe = frappe.db.exists ("Notification Settings", user)
+	if existe :
+		enabled = frappe.db.get_value("Notification Settings", user, "enable_email_notifications")
+		if enabled == 1  :
+			notset = frappe.get_doc("Notification Settings", reportado.email )
+			notset.enable_email_notifications = 0
+			notset.save(ignore_permissions = True)
