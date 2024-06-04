@@ -14,6 +14,7 @@ class Incidencia(Document):
 			self.inc_asignado = inc_asignado 
 
 	def on_update(self):
+		
 		enviarNotificacion(self)
 
 
@@ -31,7 +32,8 @@ def enviarNotificacion(self):
 	notilog = frappe.new_doc("Notification Log")
 	notilog.subject =  """Nuevo ticket  de {0}  
 						""".format(reportado.nombre_completo,   " " ,  " ")
-	notilog.for_user = correoperasig  or correo
+	notilog.for_user = correoperasig   
+	notilog.from_user = reportado.email 
 	notilog.type = "Assignment"
 	notilog.email_content = """<h4><em><span style="color: #993300;"><strong>Notificaci&oacute;n</strong>&nbsp;</span></em></h4>
 <p><br />Un nuevo requerimiento ha sido emitido por:</p>
@@ -41,7 +43,7 @@ def enviarNotificacion(self):
 <p><strong>ID:</strong>{1}</p>
 <p>&nbsp;</p>
 <p><img src="https://app.cooperativasisa.com/assets/asecop/imagenes/logoa.png" alt="" width="130" height="76" /></p>
-<p>No debe responder este correo</p>""".format(self.inc_detall,self.name,self.inc_asunt ,reportado.nom_compl)
+<p>No debe responder este correo</p>""".format(self.inc_detall,self.name,self.inc_asunt ,reportado.nombre_completo)
 	notilog.document_type = "Incidencia"
 	notilog.read = 0
 	notilog.document_name = self.name

@@ -1,0 +1,38 @@
+{
+ "based_on": "fecha",
+ "chart_name": "Estados_por_mes",
+ "chart_type": "Count",
+ "color": "#EC864B",
+ "creation": "2024-06-03 18:56:48.078275",
+ "custom_options": "{\"colores\": [\"#d1d8dd\", \"#ff5858\"]}",
+ "docstatus": 0,
+ "doctype": "Dashboard Chart",
+ "document_type": "Incidencia",
+ "dynamic_filters_json": "[]",
+ "filters_json": "[]",
+ "group_by_type": "Count",
+ "idx": 0,
+ "is_public": 0,
+ "is_standard": 1,
+ "last_synced_on": "2024-06-03 18:58:32.006853",
+ "modified": "2024-06-03 19:03:24.448774",
+ "modified_by": "Administrator",
+ "module": "gp_mod_admin",
+ "name": "Estados_por_mes",
+ "number_of_groups": 0,
+ "owner": "Administrator",
+ "parent_document_type": "",
+ "roles": [
+  {
+   "role": "GP_ROL_AGENTE"
+  }
+ ],
+ "source": "",
+ "time_interval": "Monthly",
+ "timeseries": 1,
+ "timespan": "Last Year",
+ "type": "Bar",
+ "use_report_chart": 0,
+ "value_based_on": "",
+ "y_axis": []
+}

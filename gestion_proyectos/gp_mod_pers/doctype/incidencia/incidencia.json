@@ -30,7 +30,9 @@
   "fecha_de_aprobacion",
   "inc_motivo",
   "amended_from",
-  "naming_series"
+  "naming_series",
+  "inc_mes",
+  "inc_anio"
  ],
  "fields": [
   {
@@ -189,11 +191,24 @@
    "fieldtype": "Datetime",
    "label": "Fecha de finalizaci\u00f3n",
    "read_only": 1
+  },
+  {
+   "fieldname": "inc_mes",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Mes",
+   "options": "ENERO\nFEBRERO\nMARZO\nABRIL\nMAYO\nJUNIO\nJULIO\nAGOSTO\nSEPTIEMBRE\nOCTUBRE\nNOVIEMBRE\nDICIEMBRE"
+  },
+  {
+   "fieldname": "inc_anio",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Anio"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-05-30 05:30:41.007753",
+ "modified": "2024-06-01 06:39:49.138033",
  "modified_by": "Administrator",
  "module": "gp_mod_pers",
  "name": "Incidencia",
