@@ -68,6 +68,6 @@ def disable_email_notifications():
 	if existe :
 		enabled = frappe.db.get_value("Notification Settings", frappe.session.user, "enable_email_notifications")
 		if enabled == 1  :
-			notset = frappe.get_doc("Notification Settings", reportado.email )
+			notset = frappe.get_doc("Notification Settings",frappe.session.user)
 			notset.enable_email_notifications = 0
 			notset.save(ignore_permissions = True)
