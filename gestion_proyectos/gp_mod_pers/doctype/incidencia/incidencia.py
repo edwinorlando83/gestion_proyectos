@@ -40,10 +40,11 @@ def enviarNotificacion(self):
 <p><strong>{3}</strong></p>
 <p><strong>Asunto:</strong>{2}</p>
 <p><strong>Detalle:</strong>{0}</p>
+<p><strong> Estado: {4}</strong></p>
 <p><strong>ID:</strong>{1}</p>
 <p>&nbsp;</p>
 <p><img src="https://app.cooperativasisa.com/assets/asecop/imagenes/logoa.png" alt="" width="130" height="76" /></p>
-<p>No debe responder este correo</p>""".format(self.inc_detall,self.name,self.inc_asunt ,reportado.nombre_completo)
+<p>No debe responder este correo</p>""".format(self.inc_detall,self.name,self.inc_asunt ,reportado.nombre_completo , self.inc_estado)
 	notilog.document_type = "Incidencia"
 	notilog.read = 0
 	notilog.document_name = self.name
