@@ -47,7 +47,8 @@ def enviarNotificacion(self):
 	notilog.document_type = "Incidencia"
 	notilog.read = 0
 	notilog.document_name = self.name
-	notilog.insert(ignore_permissions = True) 	 
+	notilog.insert(ignore_permissions = True) 
+	enviarCorreo	(notilog) 
 
  
 
