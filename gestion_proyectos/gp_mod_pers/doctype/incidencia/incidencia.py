@@ -40,7 +40,7 @@ def enviarNotificacion(self):
 <p><strong>{3}</strong></p>
 <p><strong>Asunto:</strong>{2}</p>
 <p><strong>Detalle:</strong>{0}</p>
-<p><strong> Estado: {4}</strong></p>
+<p><strong> Estado: </strong> {4} </p>
 <p><strong>ID:</strong>{1}</p>
 <p>&nbsp;</p>
 <p><img src="https://app.cooperativasisa.com/assets/asecop/imagenes/logoa.png" alt="" width="130" height="76" /></p>
