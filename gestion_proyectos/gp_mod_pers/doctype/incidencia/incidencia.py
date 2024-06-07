@@ -48,7 +48,7 @@ def enviarNotificacion(self):
 	notilog.read = 0
 	notilog.document_name = self.name
 	notilog.insert(ignore_permissions = True) 
-	enviarCorreo	(notilog) 
+	enviarCorreo(self,notilog) 
 
  
 
