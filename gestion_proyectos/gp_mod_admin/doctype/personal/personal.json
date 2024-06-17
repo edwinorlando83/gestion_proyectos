@@ -14,6 +14,7 @@
   "email",
   "per_ubic",
   "coop_area",
+  "jefe",
   "informacion_de_acceso_section",
   "per_tipo",
   "per_usua",
@@ -125,11 +126,17 @@
    "fieldtype": "Data",
    "hidden": 1,
    "label": "SucursalNombre"
+  },
+  {
+   "fieldname": "jefe",
+   "fieldtype": "Link",
+   "label": "Jefe Inmediato",
+   "options": "Personal"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-05-29 18:57:04.928166",
+ "modified": "2024-06-14 12:14:37.065464",
  "modified_by": "Administrator",
  "module": "gp_mod_admin",
  "name": "Personal",

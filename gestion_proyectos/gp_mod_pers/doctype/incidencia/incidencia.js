@@ -4,6 +4,7 @@
  frappe.ui.form.on("Incidencia", {
  	refresh(frm) {
         ocultarcampos(frm);
+        verReporte();
  	},
 });
 
@@ -64,4 +65,15 @@ function ocultarcampos(frm){
         
         
     }
+}
+
+function verReporte(){
+    cur_frm.add_custom_button(__('REPORTE'), function () {
+        window.open(
+          frappe.urllib.get_full_url("api/method/frappe.utils.print_format.download_pdf?"
+            + "doctype=" + encodeURIComponent("Incidencia")
+            + "&name=" + encodeURIComponent(cur_frm.doc.name)
+            + "&format=" + encodeURIComponent('ReguistroRequerimientos')
+            + "&no_letterhead=0"));
+      }).css({ 'background-color': '#FCC60B', 'font-weight': 'bold', 'color': 'black' });
 }

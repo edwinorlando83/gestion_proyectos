@@ -42,8 +42,8 @@ def enviarNotificacion(self):
 <p><strong>Detalle:</strong>{0}</p>
 <p><strong> Estado: </strong> {4} </p>
 <p><strong>ID:</strong>{1}</p>
- <p>Para más detalles sobre la incidencia, visita el siguiente enlace:</p>
-    <a href="https://soporte.cooperativasisa.com/app/incidencia/{1}" target="_blank">Ver Incidencia  </a>
+<p>Para más detalles sobre la incidencia, visita el siguiente enlace:</p>
+<a href="https://soporte.cooperativasisa.com/app/incidencia/{1}" target="_blank">Ver Incidencia  </a>
 
 <p>&nbsp;</p>
 <p><img src="https://app.cooperativasisa.com/assets/asecop/imagenes/logoa.png" alt="" width="130" height="76" /></p>
