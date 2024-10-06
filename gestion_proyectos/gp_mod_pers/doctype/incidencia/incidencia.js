@@ -12,7 +12,7 @@ function ocultarcampos(frm){
     if (!frappe.user.has_role('System Manager') ) {
     
             if (frappe.user.has_role('GP_ROL_USUARIO')    ) {
-                frm.set_df_property("inc_tipo_tiket", "hidden", 1 );
+               // frm.set_df_property("inc_tipo_tiket", "hidden", 1 );
                 frm.set_df_property("inc_prioridad", "hidden", 1 );
                 frm.set_df_property("inc_estado", "hidden", 1 );
                 frm.set_df_property("inc_observacion", "hidden", 1 );
@@ -28,7 +28,7 @@ function ocultarcampos(frm){
 
             if (frappe.user.has_role('GP_ROL_APROBADOR')    ) {
               
-                frm.set_df_property("inc_tipo_tiket", "hidden", 1 );
+              //  frm.set_df_property("inc_tipo_tiket", "hidden", 1 );
                 frm.set_df_property("inc_estado", "hidden", 1 );
                 frm.set_df_property("inc_observacion", "hidden", 1 );
                 frm.set_df_property("inc_prioridad", "hidden", 1 );
@@ -42,7 +42,7 @@ function ocultarcampos(frm){
             }
             if( frm.is_new()){
                 frm.set_df_property("inc_requiere_aprob", "read_only", 0);
-                frm.set_df_property("inc_tipo_tiket", "hidden", 1 );
+               // frm.set_df_property("inc_tipo_tiket", "hidden", 1 );
                 frm.set_df_property("inc_prioridad", "hidden", 1 );
                 frm.set_df_property("inc_estado", "hidden", 1 );
                 frm.set_df_property("inc_observacion", "hidden", 1 );

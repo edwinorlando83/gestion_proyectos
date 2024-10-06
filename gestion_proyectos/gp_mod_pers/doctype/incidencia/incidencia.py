@@ -13,8 +13,7 @@ class Incidencia(Document):
 		if inc_asignado:
 			self.inc_asignado = inc_asignado 
 
-	def on_update(self):
-		
+	def after_insert(self):		
 		enviarNotificacion(self)
 
 

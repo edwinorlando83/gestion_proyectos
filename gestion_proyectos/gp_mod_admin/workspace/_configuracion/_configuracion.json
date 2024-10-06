@@ -46,7 +46,7 @@
    "hidden": 0,
    "is_query_report": 0,
    "label": "Configuraciones",
-   "link_count": 1,
+   "link_count": 2,
    "link_type": "DocType",
    "onboard": 0,
    "type": "Card Break"
@@ -54,9 +54,19 @@
   {
    "hidden": 0,
    "is_query_report": 0,
-   "label": " gp_configuracion",
+   "label": "Configuraci\u00f3n",
    "link_count": 0,
    "link_to": "gp_configuracion",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "ubicacion_fisica",
+   "link_count": 0,
+   "link_to": "ubicacion_fisica",
    "link_type": "DocType",
    "onboard": 0,
    "type": "Link"
@@ -85,7 +95,7 @@
    "is_query_report": 0,
    "label": "Sucursal",
    "link_count": 0,
-   "link_to": "coop_area",
+   "link_to": "coop_sucursal",
    "link_type": "DocType",
    "onboard": 0,
    "type": "Link"
@@ -111,7 +121,7 @@
    "type": "Link"
   }
  ],
- "modified": "2024-05-24 20:42:21.433428",
+ "modified": "2024-10-06 07:06:17.888017",
  "modified_by": "Administrator",
  "module": "gp_mod_admin",
  "name": "_configuracion",
