@@ -5,7 +5,23 @@
  	refresh(frm) {
         ocultarcampos(frm);
         verReporte();
+
+  
+        document.querySelectorAll('.comment-box').forEach(function(element) {
+            element.style.display = 'none';
+        });
+        document.querySelector('.btn.btn-xs.btn-secondary.action-btn').style.display = 'none';
  	},
+     onload: function(frm) {
+        // Oculta la sección de comentarios
+   
+     
+        document.querySelectorAll('.comment-box').forEach(function(element) {
+            element.style.display = 'none';
+        });
+        document.querySelector('.btn.btn-xs.btn-secondary.action-btn').style.display = 'none';
+    }
+
 });
 
 function ocultarcampos(frm){
