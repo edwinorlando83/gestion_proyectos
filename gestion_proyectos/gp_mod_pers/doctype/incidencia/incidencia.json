@@ -97,10 +97,10 @@
   },
   {
    "fieldname": "inc_tipo_tiket",
-   "fieldtype": "Link",
+   "fieldtype": "Table MultiSelect",
    "label": "Tipo Tiket",
-   "options": "TipoTiket",
-   "set_only_once": 1
+   "options": "incidencia_tipotiket",
+   "reqd": 1
   },
   {
    "fieldname": "inc_prioridad",
@@ -213,7 +213,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-10-06 10:58:11.550225",
+ "modified": "2024-10-08 08:40:04.117664",
  "modified_by": "Administrator",
  "module": "gp_mod_pers",
  "name": "Incidencia",

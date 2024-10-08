@@ -14,6 +14,7 @@
   "per_area",
   "coop_area",
   "per_ubic",
+  "ncuenta",
   "jefe",
   "informacion_de_acceso_section",
   "per_tipo",
@@ -135,11 +136,16 @@
    "fieldtype": "Data",
    "label": "Jefe Inmediato",
    "read_only": 1
+  },
+  {
+   "fieldname": "ncuenta",
+   "fieldtype": "Data",
+   "label": "N\u00b0 Cuenta"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-10-06 06:56:19.339724",
+ "modified": "2024-10-06 15:03:58.048998",
  "modified_by": "Administrator",
  "module": "gp_mod_admin",
  "name": "Personal",
