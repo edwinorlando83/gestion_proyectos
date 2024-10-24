@@ -15,7 +15,12 @@ class Incidencia(Document):
 
 	def on_update(self):		
 		enviarNotificacion(self)
+		cerrarincidencia(self)
 
+def cerrarincidencia(self):
+	if self.inc_estado == 'LISTO':
+		frappe.db.set_value('Incidencia',self.name, "docstatus", 1)
+		self.reload()
 
 
 def enviarNotificacion(self):
