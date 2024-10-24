@@ -13,12 +13,15 @@ class Incidencia(Document):
 		if inc_asignado:
 			self.inc_asignado = inc_asignado 
 
-	def after_insert(self):		
+	def on_update(self):		
 		enviarNotificacion(self)
 
 
 
 def enviarNotificacion(self):
+	if self.correo_enviado == 1:
+		return
+	
 	correo= frappe.db.get_single_value("gp_configuracion", "correo")
 	reportado = frappe.get_doc("Personal", self.inc_reportado)
 	disable_email_notifications()
@@ -26,8 +29,21 @@ def enviarNotificacion(self):
 	if self.inc_asignado:
 		inc_asignado = frappe.get_doc("Personal", self.inc_asignado)
 		correoperasig = inc_asignado.email
+	detalle_mensaje = self.inc_detall
 
+	existe_archivo = frappe.db.exists("File",{"attached_to_name":self.name})
+ 
+	if existe_archivo : 
+		sitio = "https://"+frappe.local.site
+		archivo =  frappe.get_doc("File",existe_archivo);
+		urlactual =   archivo.file_url 
 	 
+		urlnuevo =  sitio+archivo.file_url 	
+ 
+		detalle_mensaje = detalle_mensaje.replace(urlactual,urlnuevo)
+		
+		
+
 	notilog = frappe.new_doc("Notification Log")
 	notilog.subject =  """Nuevo ticket  de {0}  
 						""".format(reportado.nombre_completo,   " " ,  " ")
@@ -46,12 +62,13 @@ def enviarNotificacion(self):
 
 <p>&nbsp;</p>
 <p><img src="https://app.cooperativasisa.com/assets/asecop/imagenes/logoa.png" alt="" width="130" height="76" /></p>
-<p>No debe responder este correo</p>""".format(self.inc_detall,self.name,self.inc_asunt ,reportado.nombre_completo , self.inc_estado)
+<p>No debe responder este correo</p>""".format(detalle_mensaje,self.name,self.inc_asunt ,reportado.nombre_completo , self.inc_estado)
 	notilog.document_type = "Incidencia"
 	notilog.read = 0
 	notilog.document_name = self.name
 	notilog.insert(ignore_permissions = True) 
 	enviarCorreo(self,notilog) 
+	frappe.db.set_value('Incidencia',self.name, "correo_enviado", 1)
 
  
 

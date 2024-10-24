@@ -10,7 +10,6 @@
   "fecha",
   "area",
   "sucursal",
-  "inc_tipo_tiket",
   "inc_prioridad",
   "column_break_nrky",
   "inc_asignado",
@@ -18,12 +17,15 @@
   "inc_observacion",
   "inc_horas",
   "inc_finalizacion",
+  "tipo_de_tiket_section",
+  "inc_tipo_tiket",
   "section_break_ebpb",
   "inc_asunt",
   "inc_detall",
   "section_break_rkoj",
   "inc_requiere_aprob",
   "inc_fech_apro",
+  "correo_enviado",
   "section_break_xcup",
   "inc_aprobado_por",
   "inc_se_aprueba",
@@ -97,8 +99,8 @@
   },
   {
    "fieldname": "inc_tipo_tiket",
-   "fieldtype": "Table MultiSelect",
-   "label": "Tipo Tiket",
+   "fieldtype": "Table",
+   "label": "Puedes seleccionar mas de un tipo",
    "options": "incidencia_tipotiket",
    "reqd": 1
   },
@@ -209,11 +211,24 @@
    "fieldtype": "Data",
    "hidden": 1,
    "label": "Anio"
+  },
+  {
+   "fieldname": "tipo_de_tiket_section",
+   "fieldtype": "Section Break",
+   "label": "Tipo de Tiket"
+  },
+  {
+   "default": "0",
+   "fieldname": "correo_enviado",
+   "fieldtype": "Check",
+   "label": "Correo Enviado",
+   "read_only": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-10-08 08:40:04.117664",
+ "make_attachments_public": 1,
+ "modified": "2024-10-24 05:03:11.557193",
  "modified_by": "Administrator",
  "module": "gp_mod_pers",
  "name": "Incidencia",
@@ -234,7 +249,6 @@
   },
   {
    "create": 1,
-   "delete": 1,
    "email": 1,
    "export": 1,
    "print": 1,
@@ -246,7 +260,6 @@
   },
   {
    "create": 1,
-   "delete": 1,
    "email": 1,
    "export": 1,
    "print": 1,
@@ -258,7 +271,6 @@
   },
   {
    "create": 1,
-   "delete": 1,
    "email": 1,
    "export": 1,
    "print": 1,

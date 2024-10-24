@@ -5,6 +5,12 @@ app_description = "Gestion"
 app_email = "edwin_orlando83@hotmail.com"
 app_license = "mit"
 
+
+website_context = {
+"favicon": "/assets/gestion_proyectos/favicon.png",
+"splash_image": "/assets/gestion_proyectos/logoSISA.png"
+}
+
 permission_query_conditions = {
      
 	 
