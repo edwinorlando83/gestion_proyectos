@@ -11,16 +11,15 @@
  "fields": [
   {
    "fieldname": "tic",
-   "fieldtype": "Link",
+   "fieldtype": "Select",
    "in_list_view": 1,
-   "label": "TipoTiket",
-   "options": "TipoTiket"
+   "label": "TipoTiket"
   }
  ],
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2024-10-08 08:39:25.987563",
+ "modified": "2024-10-24 11:50:39.396074",
  "modified_by": "Administrator",
  "module": "gp_mod_pers",
  "name": "incidencia_tipotiket",

@@ -11,10 +11,14 @@
             element.style.display = 'none';
         });
         document.querySelector('.btn.btn-xs.btn-secondary.action-btn').style.display = 'none';
+
+
+        addItem();
+
  	},
      onload: function(frm) {
         // Oculta la sección de comentarios
-   
+    
      
         document.querySelectorAll('.comment-box').forEach(function(element) {
             element.style.display = 'none';
@@ -100,4 +104,65 @@ function verReporte(){
     }
 
 
+}
+
+
+function addItem(){
+
+
+
+    frappe.call({
+        method: 'frappe.client.get_list',
+        args: {
+            doctype: 'TipoTiket',  // Reemplaza con el nombre del DocType
+            fields: ['name', 'tik_desc'  ],  // Especifica los campos que deseas obtener
+            limit_page_length: 1000  // Establece el límite de registros que deseas obtener (opcional)
+        },
+        callback: function(response) {
+            // Los datos del DocType están disponibles en response.message
+            if (response.message) {
+                let records = response.message;
+                
+                   let array = [];
+                // Aquí puedes hacer lo que quieras con los registros obtenidos
+                records.forEach(function(record) {
+                    console.log(record.name);  // Imprime el valor del campo 'name' de cada registro
+                    array.push(record.tik_desc)
+                });
+
+                cur_frm.fields_dict['inc_tipo_tiket'].grid.update_docfield_property('tic', 'options',  array );
+
+                
+            }
+        }
+    });
+
+
+
+    if (cur_frm.is_new()) {
+    //     cur_frm.add_child('inc_tipo_tiket', { tic:   'TIK-00001' });
+
+ 
+       
+        // cur_frm.refresh_field('inc_tipo_tiket');
+
+
+
+        if (cur_frm.doc.inc_tipo_tiket && cur_frm.doc.inc_tipo_tiket.length > 0) {
+            // Acceder a la primera fila de la tabla 'items'
+             let first_row = cur_frm.doc.inc_tipo_tiket[0];
+
+            // Modificar los campos de la primera fila
+           first_row.tic = "DATABOX";
+         
+     
+
+            // Refrescar la tabla para que los cambios se vean reflejados
+           // cur_frm.refresh_fields( );
+            cur_frm.refresh_field('inc_tipo_tiket')
+        }
+  
+
+     
+    }
 }
