@@ -67,7 +67,13 @@
     --scroll-bg: #eef1f5;
     --scroll-color: #d9dfe6;
 }
+.disabled{
+    color: white !important;
+}
 
+li.disabled {
+    color: white !important;  
+}
 
 /*****  OVERRIDDEN CSS  *****/
 
