@@ -61,7 +61,7 @@
   },
   {
    "fieldname": "detalle",
-   "fieldtype": "Small Text",
+   "fieldtype": "Text Editor",
    "label": "Detalle",
    "reqd": 1
   },
@@ -89,7 +89,8 @@
   {
    "fieldname": "horas",
    "fieldtype": "Int",
-   "label": "# Horas"
+   "label": "# Horas",
+   "reqd": 1
   },
   {
    "fieldname": "section_break_wkbx",
@@ -114,13 +115,14 @@
    "fieldtype": "Code",
    "hidden": 1,
    "label": "Codigo",
-   "options": "ACT-"
+   "options": "ACT-",
+   "print_hide": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "is_calendar_and_gantt": 1,
  "links": [],
- "modified": "2024-11-06 07:31:09.034044",
+ "modified": "2024-11-06 13:12:57.778837",
  "modified_by": "Administrator",
  "module": "gp_mod_gestion",
  "name": "gestionactividades",
