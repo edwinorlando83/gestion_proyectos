@@ -74,7 +74,9 @@
 li.disabled {
     color: white !important;  
 }
-
+.page-card-head img {
+    max-height: 100px;
+}
 /*****  OVERRIDDEN CSS  *****/
 
 /* Heading Text Color */
