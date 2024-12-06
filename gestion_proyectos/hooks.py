@@ -10,6 +10,8 @@ website_context = {
 "favicon": "/assets/gestion_proyectos/favicon.png",
 "splash_image": "/assets/gestion_proyectos/logoSISA.png"
 }
+
+app_logo_url = "/assets/gestion_proyectos/sisablanco2.png"
 brand_html = '<div><img src="/assets/gestion_proyectos/sisablanco2.png">  </div>'
 
 permission_query_conditions = {
