@@ -11,7 +11,7 @@ website_context = {
 "splash_image": "/assets/gestion_proyectos/sisablanco2.png"
 }
 
-app_logo_url = "/assets/gestion_proyectos/sisablanco2.png"
+app_logo_url = "/assets/gestion_proyectos/logoSISA.png"
 brand_html = '<div><img src="/assets/gestion_proyectos/sisablanco2.png">  </div>'
 
 permission_query_conditions = {
