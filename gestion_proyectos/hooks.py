@@ -8,7 +8,7 @@ app_license = "mit"
 
 website_context = {
 "favicon": "/assets/gestion_proyectos/favicon.png",
-"splash_image": "/assets/gestion_proyectos/logoSISA.png"
+"splash_image": "/assets/gestion_proyectos/sisablanco2.png"
 }
 
 app_logo_url = "/assets/gestion_proyectos/sisablanco2.png"
