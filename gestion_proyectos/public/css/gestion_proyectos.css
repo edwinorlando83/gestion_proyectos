@@ -191,6 +191,8 @@ input:focus{
 .navbar{
     background: var(--background-color) !important;
     height: var(--navbar-height);
+    color: white !important;
+
 }
 .navbar-expand{
     background-color: var(--background-color);
@@ -210,10 +212,10 @@ input:focus{
     top: 3px;
     content: "\f105";
     margin-right: 10px;
-    color: var(--white-color);
+    color: var(--white-color) !important;
 }
 #navbar-breadcrumbs a{
-    color: var(--white-color);
+    color: var(--white-color) !important;
     text-decoration: none;
 }
 header .form-control{
