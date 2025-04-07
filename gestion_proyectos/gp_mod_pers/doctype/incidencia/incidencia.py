@@ -14,8 +14,10 @@ class Incidencia(Document):
 			self.inc_asignado = inc_asignado 
 
 	def on_update(self):		
-		enviarNotificacion(self)
+ 
 		cerrarincidencia(self)
+	def validate(self):        
+		enviarNotificacion(self)
 
 def cerrarincidencia(self):
 	if self.inc_estado == 'LISTO':
@@ -24,9 +26,15 @@ def cerrarincidencia(self):
 
 
 def enviarNotificacion(self):
-	if self.correo_enviado == 1:
-		return
+ 
+		
+	old_doc = self.get_doc_before_save()
+    
+ 
+	if old_doc and old_doc.inc_estado == self.inc_estado:
+		return 
 	
+
 	correo= frappe.db.get_single_value("gp_configuracion", "correo")
 	reportado = frappe.get_doc("Personal", self.inc_reportado)
 	disable_email_notifications()
@@ -50,24 +58,70 @@ def enviarNotificacion(self):
 		
 
 	notilog = frappe.new_doc("Notification Log")
-	notilog.subject =  """Nuevo ticket  de {0}  
-						""".format(reportado.nombre_completo,   " " ,  " ")
+	notilog.subject =  """Nuevo ticket  de {0}  """.format(reportado.nombre_completo,   " " ,  " ")
 	notilog.for_user = correoperasig   
 	notilog.from_user = reportado.email 
 	notilog.type = "Assignment"
-	notilog.email_content = """<h4><em><span style="color: #993300;"><strong>Notificaci&oacute;n</strong>&nbsp;</span></em></h4>
-<p><br />Un nuevo requerimiento ha sido emitido por:</p>
-<p><strong>{3}</strong></p>
-<p><strong>Asunto:</strong>{2}</p>
-<p><strong>Detalle:</strong>{0}</p>
-<p><strong> Estado: </strong> {4} </p>
-<p><strong>ID:</strong>{1}</p>
-<p>Para más detalles sobre la incidencia, visita el siguiente enlace:</p>
-<a href="https://soporte.cooperativasisa.com/app/incidencia/{1}" target="_blank">Ver Incidencia  </a>
 
-<p>&nbsp;</p>
-<p><img src="https://app.cooperativasisa.com/assets/asecop/imagenes/logoa.png" alt="" width="130" height="76" /></p>
-<p>No debe responder este correo</p>""".format(detalle_mensaje,self.name,self.inc_asunt ,reportado.nombre_completo , self.inc_estado)
+	mensaje = "Un nuevo requerimiento ha sido emitido por"
+	if not self.is_new():
+		mensaje = "Se ha actualizado el estado de su incidencia"
+		notilog.subject =  """Actulización de estado del ticket  de {0}  """.format(reportado.nombre_completo,   " " ,  " ")
+	notilog.email_content = """
+	<div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
+    <div style="background-color: #f5f5f5; padding: 15px; border-left: 4px solid #993300;">
+        <h3 style="color: #993300; margin: 0;">Notificación de Soporte Técnico</h3>
+    </div>
+    
+    <div style="padding: 20px 15px;">
+        <p><strong>{5}</strong></p>
+        
+        <table style="width: 100%; border-collapse: collapse; margin-top: 15px;">
+            <tr>
+                <td style="padding: 8px 0; width: 30%;"><strong>Reportado por:</strong></td>
+                <td style="padding: 8px 0;">{3}</td>
+            </tr>
+            <tr>
+                <td style="padding: 8px 0; width: 30%;"><strong>Asunto:</strong></td>
+                <td style="padding: 8px 0;">{2}</td>
+            </tr>
+            <tr>
+                <td style="padding: 8px 0; width: 30%; vertical-align: top;"><strong>Detalle:</strong></td>
+                <td style="padding: 8px 0;">{0}</td>
+            </tr>
+            <tr>
+                <td style="padding: 8px 0; width: 30%;"><strong>Estado:</strong></td>
+                <td style="padding: 8px 0;"><span style="font-weight: bold;">{4}</span></td>
+            </tr>
+            <tr>
+                <td style="padding: 8px 0; width: 30%;"><strong>ID de Incidencia:</strong></td>
+                <td style="padding: 8px 0;">{1}</td>
+            </tr>
+        </table>
+        
+        <div style="margin: 25px 0;">
+            <a href="https://help.cooperativasisa.com/app/incidencia/{1}" 
+               style="background-color: #993300; color: white; padding: 10px 15px; 
+               text-decoration: none; border-radius: 4px; font-weight: bold;">
+               Ver Detalles de la Incidencia
+            </a>
+        </div>
+    </div>
+    
+    <div style="margin-top: 30px; border-top: 1px solid #ddd; padding-top: 15px; text-align: center;">
+        <img src="https://help.cooperativasisa.com/assets/gestion_proyectos/logoSISA.png" alt="Logo" width="130" height="76" />
+        <p style="color: #777; font-size: 12px; margin-top: 10px;">
+            Este es un mensaje automático. Por favor no responda a este correo.
+        </p>
+    </div>
+	</div>""".format(
+    detalle_mensaje,
+    self.name,
+    self.inc_asunt,
+    reportado.nombre_completo,
+    self.inc_estado,
+    mensaje)
+
 	notilog.document_type = "Incidencia"
 	notilog.read = 0
 	notilog.document_name = self.name
