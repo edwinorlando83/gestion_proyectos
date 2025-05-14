@@ -10,6 +10,9 @@
   "nombre_completo",
   "email",
   "per_carg",
+  "telefono",
+  "genero_gp",
+  "fecha_nacimiento",
   "column_break_jhlj",
   "per_area",
   "coop_area",
@@ -141,11 +144,27 @@
    "fieldname": "ncuenta",
    "fieldtype": "Data",
    "label": "N\u00b0 Cuenta"
+  },
+  {
+   "fieldname": "telefono",
+   "fieldtype": "Data",
+   "label": "Tel\u00e9fono"
+  },
+  {
+   "fieldname": "genero_gp",
+   "fieldtype": "Link",
+   "label": "G\u00e9nero",
+   "options": "genero_gp"
+  },
+  {
+   "fieldname": "fecha_nacimiento",
+   "fieldtype": "Date",
+   "label": "Fecha de nacimiento"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-10-06 15:03:58.048998",
+ "modified": "2025-05-13 17:58:38.815668",
  "modified_by": "Administrator",
  "module": "gp_mod_admin",
  "name": "Personal",
