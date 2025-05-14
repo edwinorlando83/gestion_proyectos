@@ -52,7 +52,7 @@
  "idx": 0,
  "is_standard": "Yes",
  "letterhead": null,
- "modified": "2025-05-14 08:16:56.099041",
+ "modified": "2025-05-14 08:49:03.461691",
  "modified_by": "Administrator",
  "module": "gp_mod_admin",
  "name": "ReporteUsuarios",
@@ -70,10 +70,10 @@
    "role": "GP_ROL_AGENTE"
   },
   {
-   "role": "GP_ROL_USUARIO"
+   "role": "GP_ROL_APROBADOR"
   },
   {
-   "role": "GP_ROL_APROBADOR"
+   "role": "Administrator"
   }
  ],
  "timeout": 0
