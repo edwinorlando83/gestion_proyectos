@@ -7,6 +7,7 @@
  "engine": "InnoDB",
  "field_order": [
   "inc_reportado",
+  "titulo",
   "fecha",
   "area",
   "sucursal",
@@ -223,12 +224,18 @@
    "fieldtype": "Check",
    "label": "Correo Enviado",
    "read_only": 1
+  },
+  {
+   "fieldname": "titulo",
+   "fieldtype": "Data",
+   "label": "Titulo",
+   "reqd": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
  "make_attachments_public": 1,
- "modified": "2024-10-24 05:03:11.557193",
+ "modified": "2025-05-14 08:20:31.658898",
  "modified_by": "Administrator",
  "module": "gp_mod_pers",
  "name": "Incidencia",

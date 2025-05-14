@@ -1,0 +1,80 @@
+{
+ "add_total_row": 0,
+ "columns": [
+  {
+   "fieldname": "nombre_completo",
+   "fieldtype": "Data",
+   "label": "NOMBRES",
+   "width": 350
+  },
+  {
+   "fieldname": "per_usua",
+   "fieldtype": "Data",
+   "label": "USUARIO",
+   "width": 250
+  },
+  {
+   "fieldname": "detalle",
+   "fieldtype": "Data",
+   "label": "GENERO",
+   "width": 150
+  },
+  {
+   "fieldname": "telefono",
+   "fieldtype": "Data",
+   "label": "TELEFONO",
+   "width": 130
+  },
+  {
+   "fieldname": "fecha_nacimiento",
+   "fieldtype": "Date",
+   "label": "FECHA DE NACIMIENTO",
+   "width": 130
+  },
+  {
+   "fieldname": "area_desc",
+   "fieldtype": "Data",
+   "label": "AGENCIA",
+   "width": 200
+  },
+  {
+   "fieldname": "carg_desc",
+   "fieldtype": "Data",
+   "label": "CARGO",
+   "width": 300
+  }
+ ],
+ "creation": "2025-05-14 08:14:29.594927",
+ "disabled": 0,
+ "docstatus": 0,
+ "doctype": "Report",
+ "filters": [],
+ "idx": 0,
+ "is_standard": "Yes",
+ "letterhead": null,
+ "modified": "2025-05-14 08:16:56.099041",
+ "modified_by": "Administrator",
+ "module": "gp_mod_admin",
+ "name": "ReporteUsuarios",
+ "owner": "Administrator",
+ "prepared_report": 0,
+ "query": "select p.nombre_completo, p.per_usua,  g.detalle  , p.telefono , p.fecha_nacimiento ,\r\nu.area_desc , c.carg_desc\r\nfrom tabPersonal  p \r\nleft join tabgenero_gp g on ( p.genero_gp = g.name) \r\nleft join tabcoop_sucursal u on ( p.per_area = u.name) \r\nleft join tabCargo c on ( p.per_carg = c.name) ",
+ "ref_doctype": "Personal",
+ "report_name": "ReporteUsuarios",
+ "report_type": "Query Report",
+ "roles": [
+  {
+   "role": "System Manager"
+  },
+  {
+   "role": "GP_ROL_AGENTE"
+  },
+  {
+   "role": "GP_ROL_USUARIO"
+  },
+  {
+   "role": "GP_ROL_APROBADOR"
+  }
+ ],
+ "timeout": 0
+}
